@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-image: url("Images/ConcreteRoom.jpg");
+  background-image: url("Images/TitleBackground.png");
   background-repeat: no-repeat;
-  background-position:bottom;
+  background-position:center;
   background-size: cover;
   padding:20vmin 0 20vmin 0;
+  overflow: visible;
 }
 .MainLogoDiv{
   display: flex;
@@ -14,8 +15,8 @@
   border-style: solid;
   border-width:5px 0px 5px 0px;
   border-color: white;
-  margin-left: 25vmin;
-  margin-right: 25vmin;
+  margin-left: 5vmin;
+  margin-right: 5vmin;
   padding:10px 0px 10px 0px;
 }
 .SideDivs{
@@ -35,65 +36,157 @@
   flex-wrap: nowrap;
   overflow-x: scroll;
   overflow-y: visible;
-  width:60vmin;
-  height:50vmin;
+  width:90vmin;
+  height:80vmin;
 }
 .ImgScrollDiv img{
   width:100%;
   position:relative;/*absolute for one image*/
 }
 
+.Seperator{
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  grid-column-start: 2;
+  grid-column-end: span 3;
+  text-decoration: line-through;
+  text-decoration-color: white;
+}
+
 .Middle{
   display: grid;
-  grid-template-columns: 45% 10% 45%;
-  grid-row-gap: 10vmin;
-  grid-auto-rows:minmax(100px, auto);
+  grid-template-columns: repeat(6 1fr);
+  grid-row-gap: 5vmin;
   margin-top: 10vmin;
+  margin-bottom: 10vmin;
 }
-.Middle div{
+
+.MidTitleLeft{
   grid-column-start: 1;
-  grid-column-end: 2;
-  /* display:grid;
-  grid-template-columns: 40% 20% 40%;
-  ; */
-}
-.Middle div:nth-child(even){
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-.Middle div p{
+  grid-column-end: span 6;
   display: flex;
+  justify-content: flex-start;
+  color:white;
+  font-size:8vmin;
+  font-family: 'Cairo', sans-serif;
+  margin:0 0 0 0;
+}
+.MidTitleRight{
+  grid-column-start: 1;
+  grid-column-end: span 6;
+  display: flex;
+  justify-content: flex-end;
+  color:white;
+  font-size:8vmin;
+  font-family: 'Cairo', sans-serif;
+  margin:0 0 0 0;
+}
+
+.LeftAlignDiv{
+  grid-column-start: 1;
+  grid-column-end: span 3;
+}
+.LeftAlignDiv p{
+  color:white;
+  font-size:8vmin;
+  font-family: 'Cairo', sans-serif;
+  margin:0 0 0 0;
+}
+.LeftAlignSideText{
+  grid-column-start: 4;
+  grid-column-end: span 2;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-bottom: 1vmin;
+  flex-wrap: wrap;
+  color:white;
+  margin-bottom: 20vmin;
+}
+.LeftAlignSideText p{
+  font-size: 6vmin;
+  font-family: 'Abel', sans-serif;
+  margin:0 0 0 10vmin;
+}
+.LeftAlignSideText p + p{
+  font-size: 4vmin;
+  font-family: 'Barlow Condensed', sans-serif;
+  justify-content: flex-start;
+}
+.LeftAlignDiv p + p{
+  font-size:5vmin;
+}
+.LeftAlignDiv img{
+  width:100%;
+}
+
+.RightAlignDiv{
+  grid-column-start: 3;
+  grid-column-end: span 3;
+}
+.RightAlignDiv p{
+  display:flex;
+  justify-content: flex-end;
+  color:white;
+  font-size:8vmin;
+  font-family: 'Cairo', sans-serif;
+  text-align: right;
+  margin:0 0 0 0;
+}
+.RightAlignSideText{
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  color:white;
+  margin-bottom: 20vmin;
+}
+.RightAlignSideText p{
+  font-size: 6vmin;
+  font-family: 'Abel', sans-serif;
+  text-align: right;
+  margin:0 10vmin 0 0;
+}
+.RightAlignSideText p + p{
+  font-size: 4vmin;
+  font-family: 'Barlow Condensed', sans-serif;
+  justify-content: flex-end;
+}
+.RightAlignDiv p + p{
+  font-size:5vmin;
+}
+.RightAlignDiv img{
+  width:100%;
+}
+
+.Footer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  color:white;
+  border-top: solid white 1px;
+}
+.Footer div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Footer div:nth-child(even){
   font-size: 10vmin;
-  color: white;
+  font-family: 'Khand', sans-serif;
 }
-.Middle div img{
-  width:100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
+.Footer div:nth-child(odd){
+  font-size: 3vmin;
+  font-family: 'Barlow Condensed', sans-serif;
 }
-.LeftMidDiv{
-  grid-column-start: 1;
-  /* grid-column-end: 1; */
+.Footer div p{
+  margin:0 0 0 0;
 }
-.LeftMidDiv img{
-  grid-column-start: 1;
-  grid-column-end: 3;
-  width:100%;
-  height:100%;
-}
-.RightMidDiv{
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-.RightMidDiv img{
-  grid-column-start: 2;
-  grid-column-end: 4;
-  width:100%;
-  height:100%;
+.Footer img{
+  grid-column-start: 3;
+  width:35vmin;
 }
 
 body{
