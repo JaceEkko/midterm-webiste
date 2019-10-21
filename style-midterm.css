@@ -60,6 +60,7 @@
   flex-wrap: nowrap;
   text-decoration: none;
   border: solid white 1px;
+  padding: 5px;
 }
 .Ref:hover{
   background-color: white;
