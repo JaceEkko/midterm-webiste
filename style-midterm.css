@@ -45,6 +45,27 @@
   position:relative;/*absolute for one image*/
 }
 
+.LinkBar{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10vmin;
+  padding:5vmin 0 5vmin 0;
+  border-top: solid white 1px;
+  border-bottom: solid white 1px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.Ref{
+  font-size: 5vmin;
+  color: white;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  border: solid white 1px;
+}
+.Ref:hover{
+  background-color: white;
+  color:black;
+}
+
 /*The line seperator class*/
 .Seperator{
   display: flex;
