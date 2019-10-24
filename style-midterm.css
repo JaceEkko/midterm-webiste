@@ -39,6 +39,9 @@
   overflow-y: visible;
   width:90vmin;
   height:80vmin;
+
+  transition: width .3s;
+  transition: height .3s;
 }
 .ImgScrollDiv img{
   width:100%;
@@ -95,6 +98,8 @@
   font-size:8vmin;
   font-family: 'Cairo', sans-serif;
   margin:0 0 0 0;
+
+  transition: font-size .3s;
 }
 .MidTitleRight{
   grid-column-start: 1;
@@ -105,11 +110,16 @@
   font-size:8vmin;
   font-family: 'Cairo', sans-serif;
   margin:0 0 0 0;
+
+  transition: font-size .3s;
 }
 
 .LeftAlignDiv{
   grid-column-start: 1;
   grid-column-end: span 3;
+
+  transition: grid-column-start .2s;
+  transition: grid-column-end .2s;
 }
 .LeftAlignDiv p{
   color:white;
@@ -147,6 +157,9 @@
 .RightAlignDiv{
   grid-column-start: 3;
   grid-column-end: span 3;
+
+  transition: grid-column-start .3s;
+  transition: grid-column-end .3s;
 }
 .RightAlignDiv p{
   display:flex;
@@ -166,12 +179,16 @@
   flex-wrap: wrap;
   color:white;
   margin-bottom: 20vmin;
+
+  transition: grid-column-end .3s;
 }
 .RightAlignSideText p{
   font-size: 6vmin;
   font-family: 'Abel', sans-serif;
   text-align: right;
   margin:0 10vmin 0 0;
+
+  transition: font-size: .3s;
 }
 .RightAlignSideText p + p{
   font-size: 4vmin;
@@ -212,6 +229,84 @@
 .Footer img{
   grid-column-start: 3;
   width:35vmin;
+}
+
+@media screen and (max-width: 1140px){ /*Phone Size MAKE SURE EVERYTHING HAS ANIMATIONS*/
+  /*HEADER*/
+  .ImgScrollDiv{
+    width:70vmin;
+    height:60vmin;
+  }
+
+  .Ref{
+    display: flex;
+    align-items: center;
+  }
+
+  /*MIDDLE*/
+  .Seperator{
+    overflow: hidden;
+  }
+
+  .Middle{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .MidTitleLeft{
+    font-size: 8vmin;
+    justify-content: center;
+    text-align: center;
+  }
+  .LeftAlignDiv{
+    grid-column-start: 3;
+    grid-column-end: span 3;
+  }
+  .LeftAlignSideText{
+    grid-column-start: 1;
+  }
+  .LeftAlignSideText p{
+    text-align: left;
+    margin: 0 0 0 0;
+  }
+  .LeftAlignDiv p + p{
+    text-align: center;
+  }
+  .MidTitleRight{
+    font-size: 8vmin;
+    justify-content: center;
+    text-align: center;
+  }
+  .RightAlignDiv{
+    grid-column-start: 3;
+    grid-column-end: span 3;
+  }
+  .RightAlignSideText{
+    grid-column-end: span 1;
+  }
+  .RightAlignSideText p{
+    text-align: left;
+    margin: 0 0 0 0;
+  }
+  .RightAlignDiv p + p{
+    text-align: center;
+  }
+
+  /*FOOTER*/
+  .Footer{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .ImgScrollDiv{
+    width:60vmin;
+    height:50vmin;
+  }
+}
+@media screen and (max-width: 500px){
+  .ImgScrollDiv{
+    width:50vmin;
+    height:40vmin;
+  }
 }
 
 body{
