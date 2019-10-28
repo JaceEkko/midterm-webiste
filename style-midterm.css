@@ -231,7 +231,7 @@
   width:35vmin;
 }
 
-@media screen and (max-width: 1140px){ /*Phone Size MAKE SURE EVERYTHING HAS ANIMATIONS*/
+@media screen and (max-width: 1142px){ /*Phone Size MAKE SURE EVERYTHING HAS ANIMATIONS*/
   /*HEADER*/
   .ImgScrollDiv{
     width:70vmin;
