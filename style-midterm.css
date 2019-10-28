@@ -255,6 +255,7 @@
     font-size: 8vmin;
     justify-content: center;
     text-align: center;
+    justify-content: center;
   }
   .LeftAlignDiv{
     grid-column-start: 3;
